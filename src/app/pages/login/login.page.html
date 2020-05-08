@@ -1,28 +1,46 @@
 <ion-header>
 	<ion-toolbar class="background-color">
-		<ion-title>
-			<h1 class="mb-1 ta-c">Know Language</h1>
-		</ion-title>
+		<ion-title >Login</ion-title>
 	</ion-toolbar>
 </ion-header>
+
+
 <ion-content [fullscreen]="true" [formGroup]="loginForm" padding class="background-img">
-	<ion-list lines="full" class="ion-no-margin ion-no-padding ion-background-color">
-		<ion-item>
-			<ion-input required class="mt-4 placeholder-text" type="text" placeholder="Email" formControlName="email"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-input required class="mt-4 placeholder-text" type="password" placeholder="Contraseña" formControlName="password"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label required class="mt-4 background-color">Tipo de usuario</ion-label>
-			<ion-select class="mt-4" formControlName="typeOfUser" (ionChange)="insertEmail()" interface="popover">
-				<ion-select-option *ngFor='let user of testUser' [value]="user">{{user.email}}</ion-select-option>
-			</ion-select>
-		</ion-item>
-	</ion-list>
-	<ion-progress-bar color="dark" type="indeterminate" *ngIf="isLoading"></ion-progress-bar>
-	<div class="ion-padding">
-		<ion-button expand="block" type="submit" class="ion-no-margin mt-4" color="dark" (click)="login()">Acceder
-		</ion-button>
+	<ion-grid>
+		<ion-row>
+			<ion-col size="2"></ion-col>
+			<ion-col size="8">
+				<ion-list lines="full" class="ion-no-margin ion-no-padding ion-background-color">
+					<ion-item>
+						<ion-input required class="placeholder-text t-color" type="text" placeholder="Email" formControlName="email"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-input required class="placeholder-text t-color" type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-label required class="t-color"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Usuarios</ion-label>
+						<ion-select class="t-color" formControlName="typeOfUser" (ionChange)="insertEmail()">
+							<ion-select-option  *ngFor='let user of testUser' [value]="user">{{user.email}}</ion-select-option>
+						</ion-select>
+					</ion-item>
+				</ion-list>
+				<ion-progress-bar color="dark" type="indeterminate" *ngIf="isLoading"></ion-progress-bar>
+			</ion-col>
+			<ion-col size="2"></ion-col>
+		</ion-row>
+	</ion-grid>
+	<div style="width: 100%; height: 50%;">
+		<img src="/assets/ladron.jpg">
 	</div>
+<ion-grid>	
+	<ion-row>
+		<ion-col size="2"></ion-col>
+		<ion-col size="8">
+				<ion-button expand="block" type="submit" [disabled]="!loginForm.valid" class="ion-no-margin mt-4" color="yamil" fill="outline" (click)="login()">Acceder</ion-button>
+		</ion-col>
+		<ion-col size="2"></ion-col>
+	</ion-row>
+</ion-grid>
+	
+
 </ion-content>

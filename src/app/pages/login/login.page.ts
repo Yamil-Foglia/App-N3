@@ -42,7 +42,8 @@ export class LoginPage implements OnInit {
 			.then(x => {
 				this.isLoading = false;
 				console.log('email', x);
-				this.router.navigate(['/home/']);
+				let pwd = (this.loginForm.get('typeOfUser').value as IUser).pwd;
+					this.router.navigate(['/home/'+pwd]);
 			})
 			.catch(x => {
 				this.isLoading = false;

@@ -3,6 +3,15 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  /** yamil **/
+  --ion-color-yamil: rgba(0, 0, 0, 0.514);
+  --ion-color-yamil-rgb: 238,235,213;
+  --ion-color-yamil-contrast: rgb(0, 0, 0);;
+  --ion-color-yamil-contrast-rgb: 0,0,0;
+  --ion-color-yamil-shade: rgba(0, 0, 0, 0.514);;
+  --ion-color-yamil-tint: rgba(0, 0, 0, 0.514);;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +83,16 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+
+.ion-color-yamil {
+  --ion-color-base: var(--ion-color-yamil);
+  --ion-color-base-rgb: var(--ion-color-yamil-rgb);
+  --ion-color-contrast: var(--ion-color-yamil-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-yamil-contrast-rgb);
+  --ion-color-shade: var(--ion-color-yamil-shade);
+  --ion-color-tint: var(--ion-color-yamil-tint);
 }
 
 @media (prefers-color-scheme: dark) {

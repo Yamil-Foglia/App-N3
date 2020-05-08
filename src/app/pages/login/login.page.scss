@@ -1,20 +1,28 @@
 
 .background-img {
-    //--ion-background-color:#AF5921;
-    //--background: url(../../assets/lenguajes.png);
+    //--background: url(../../assets/chat.jpg);
+    --background:#73deff;
+    //--background:linear-gradient(rgb(75, 186, 231) 60%,rgb(7, 246, 146));
 }
 
 .placeholder-text {
-    --placeholder-color:black;
+    --placeholder-color:rgb(0, 0, 0);
+    text-align: center;
 }
 
 .ion-background-color {
-    --ion-background-color: #EEEBD5;
+    --ion-background-color:rgba(0, 0, 0, 0);
+}
+
+.opacity-complete {
+    --ion-disabled-opacity: 0;
 }
 
 .background-color {
-    --background:#EEEBD5;
-    --color:gray;
+    --background:#73deff;
+    --color:rgba(0, 0, 0, 0.514);
 }
 
-
+.t-color {
+    --color:rgba(0, 0, 0, 0.514);
+}
